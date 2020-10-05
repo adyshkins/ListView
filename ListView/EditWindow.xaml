@@ -1,0 +1,61 @@
+﻿<Window x:Class="ListView.EditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListView"
+        mc:Ignorable="d"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
+        Title="EditWindow" Height="450" Width="300"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid >
+            <StackPanel>
+                <Border Width="100"
+                       Height="150"
+                        BorderThickness="1"
+                        BorderBrush="Gray"
+                        Margin="5">
+                    <Image x:Name="photoUser"
+                           Margin="5" 
+                           Stretch="Uniform"
+                           Source="{Binding Path= photo}">
+                        
+                    </Image>
+                </Border>
+                
+                <Button Content="Выбрать изображение"
+                        Name="editPhoto"
+                        Width="170"
+                        FontSize="15"
+                        Margin="5" Click="EditPhoto_Click" />
+                
+                <TextBlock Width="170"
+                           FontSize="15"
+                           Margin="15 5"
+                    >Имя</TextBlock>
+                
+                <TextBox x:Name="nameUserTXT"
+                        FontSize="15"
+                         Margin="5"
+                         Width="170"/>
+                
+                <TextBlock Width="170"
+                           FontSize="15"
+                           Margin="15 5"
+                    >Возраст</TextBlock>
+                
+                <TextBox x:Name="ageUserTXT"
+                         Margin="5"
+                         FontSize="15"
+                         Width="170"/>
+
+                <Button Content="Сохранить"
+                         Width="170"
+                        FontSize="15"
+                        Margin="5" Click="Button_Click"/>
+                        
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
